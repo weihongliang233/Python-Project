@@ -1,6 +1,10 @@
 from eigvalue import *
 import numpy as np
-def Kagome_eigvalues(kx,ky) :
+def Kagome_eigvalues(Input) :
+
+	##修改函数
+	kx=Input[0]
+	ky=Input[1]
 	### 以下定义矩阵元
 	a11=float(5/2)
 	a22=1
