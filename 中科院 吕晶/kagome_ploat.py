@@ -17,18 +17,24 @@ kkx=kx.flatten()
 kky=ky.flatten()
 XY=mma.partition(mma.riffle(kkx,kky),2)
 ##获取本征值
-Z=map(Kagome_eigvalues,XY)
+Z=map(Kagome_Eigvalues,XY)
+
 ##取第零列
 ZZ=np.array(Z)[:,0]
 ##将它重新组织成meshgrid应该对应的形式
 ZZZ=np.array(mma.partition(ZZ,len(kx)))
 
+ZZZ.real
 
-#绘制平面
-ax.plot_surface(kx, ky, ZZZ, cmap=cm.coolwarm)
 
-1+1
+fig = plt.figure()
+ax = fig.gca(projection='3d')
 
-		
+# Plot the surface.
+surf = ax.plot_surface(kx, ky, ZZZ.real, cmap=cm.coolwarm,
+                       linewidth=0, antialiased=False)
+
+# Add a color bar which maps values to colors.
+fig.colorbar(surf, shrink=0.5, aspect=5)
+
 plt.show()
-

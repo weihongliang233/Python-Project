@@ -1,6 +1,6 @@
 from eigvalue import *
 import numpy as np
-def Kagome_eigvalues(Input) :
+def Kagome_Eigvalues(Input) :
 
 	##修改函数
 	kx=Input[0]
@@ -36,4 +36,6 @@ def Kagome_eigvalues(Input) :
 	eigvalue=eigvalue.tolist()
 	return eigvalue
 	##### 返回特征值
+
+Kagome_Eigvalues([1,2])
 
