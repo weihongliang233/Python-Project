@@ -1,12 +1,12 @@
 # 导入包
-'''
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pyautogui as pag
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-'''
+
 # 登录
 driver = webdriver.Edge('G:\\Edge浏览器下载\\edgedriver_win64\\msedgedriver.exe')
 driver.get("http://my.lzu.edu.cn:8080/login?service=http://my.lzu.edu.cn")
@@ -50,12 +50,20 @@ except:
 
 tempretrue='/html/body/uni-app/div/div[2]/uni-picker-view/div/uni-picker-view-column[1]/div/div[3]/div[4]'
 concern_tempretrue='/html/body/uni-app/div/div[2]/div/div[2]'
-tempretrue_selector='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[8]/uni-view/uni-picker/div[2]/uni-view'
+tempretrue_selector='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[9]/uni-view/uni-picker'
 xpath_of_commit='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[12]/uni-button'
 
-driver.find_element_by_xpath(tempretrue_selector).click()
+
+tempretrue_selector2='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[8]/uni-view/uni-picker'
+driver.find_element_by_xpath(tempretrue_selector2).click()
 time.sleep(2)
 driver.find_element_by_xpath(tempretrue).click()
+time.sleep(2)
 driver.find_element_by_xpath(concern_tempretrue).click()
 driver.find_element_by_xpath(xpath_of_commit).click()
 print('执行完毕')
+
+
+driver.find_element_by_xpath(tempretrue_selector).click()
+
+/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[9]
