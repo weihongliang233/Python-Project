@@ -55,7 +55,9 @@ xpath_of_commit='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-
 
 
 tempretrue_selector2='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[8]/uni-view/uni-picker'
-driver.find_element_by_xpath(tempretrue_selector2).click()
+tempretrue_selector3='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[9]/uni-view/uni-picker'
+tempretrue_selector4='/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[8]/uni-view/uni-picker'
+driver.find_element_by_xpath(tempretrue_selector4).click()
 time.sleep(2)
 driver.find_element_by_xpath(tempretrue).click()
 time.sleep(2)
@@ -63,7 +65,4 @@ driver.find_element_by_xpath(concern_tempretrue).click()
 driver.find_element_by_xpath(xpath_of_commit).click()
 print('执行完毕')
 
-
-driver.find_element_by_xpath(tempretrue_selector).click()
-
-/html/body/uni-app/uni-page/uni-page-wrapper/uni-page-body/uni-view/uni-view[3]/uni-view/uni-form/span/uni-view[9]
+tempretrue_selector3==tempretrue_selector
