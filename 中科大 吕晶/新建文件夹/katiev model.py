@@ -25,18 +25,20 @@ for K in range(1,2):
 			gr1=(1/4)*((np.sqrt(3)/(3*np.pi*(0.5*KD)**2))*(Em-(E+E0)*np.log(abs(1+Em/(E+E0))))+1/(E+E0+0.5*KD))+1j*(1/4)*np.pi*(np.sqrt(3)/(3*np.pi*(0.5*KD)**2))*(E+E0)
 			gr2=(1/2)*(1/(E-E0-0.5*KD+1j*0.000001))
 			# 计算大格林函数
-
-			print(gr1)
-			
-
 			GR1=gr1/(1+1j*gr1*gama)
 			GR2=gr2/(1+1j*gr2*gama)
 			# 计算被积函数，被积函数本应是电流V,温度T,态密度和跃迁矩阵元(耦合成gama参数)的函数，但是这里只考虑I-V的关系
 			F=(gama**2/(2*np.pi))*(GR1*GR1.conjugate()+GR2*GR2.conjugate())*(fermi_distrubution(E+eV,T)-fermi_distrubution(E,T))
+			
+			print(fermi_distrubution(E,T))
 			return F
 			# 以下计算积分
 		I=abs(gauss_integral.Gauss_integral(-6,6,F)) #高斯积分函数积分
+		
 		return I
+
+
+		Crrent(4)
 	eV=np.arange(0,10,0.01)
 	I=[]
 	for x in eV:
@@ -52,3 +54,4 @@ ax.set(xlabel='eV', ylabel='Crrent')
 legend = ax.legend(loc = 'upper center', frameon=False, shadow=False, fontsize=10)
 ax.grid()
 plt.show()
+np.shape(I)
